@@ -1,0 +1,12 @@
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+    double x = 27.0;
+    double cbrt_x = cbrt(x);
+
+    std::cout << "The cube root of " << x << " is " << cbrt_x << std::endl;
+
+    return 0;
+}
