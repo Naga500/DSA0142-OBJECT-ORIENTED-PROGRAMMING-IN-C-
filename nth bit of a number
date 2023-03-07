@@ -1,0 +1,27 @@
+#include <iostream>
+#include <unordered_map>
+#include <vector>
+
+int main()
+{
+    std::vector<int> arr = {1, 2, 3, 4, 4, 4, 5, 5, 6, 6, 6, 6, 6};
+    std::unordered_map<int, int> freq;
+
+    for (int i = 0; i < arr.size(); i++) {
+        freq[arr[i]]++;
+    }
+
+    int most_frequent_element = arr[0];
+    int max_freq = 0;
+
+    for (auto p : freq) {
+        if (p.second > max_freq) {
+            most_frequent_element = p.first;
+            max_freq = p.second;
+        }
+    }
+
+    std::cout << "The most frequent element is " << most_frequent_element << " with a frequency of " << max_freq << std::endl;
+
+    return 0;
+}
